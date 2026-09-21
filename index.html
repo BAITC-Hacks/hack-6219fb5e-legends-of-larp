@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RedArm AI — навигатор здоровья</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="logo-overrides.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark" aria-label="RedArm AI"><img src="redarm-logo.jpg" alt="Красная механическая рука" /></span><span>RedArm <b>AI</b></span></a>
+      <div class="new-chat">＋ Новый запрос</div>
+      <nav>
+        <a class="active" href="#chat">◌ Помощник</a>
+        <a href="#clinics">⌖ Клиники рядом</a>
+        <a href="#about">ⓘ О сервисе</a>
+      </nav>
+      <div class="side-note"><span>🛡</span><p>Не ставим диагнозы.<br>Помогаем выбрать маршрут.</p></div>
+    </aside>
+
+    <section class="workspace" id="chat">
+      <header><div><p class="eyebrow">МЕДИЦИНСКИЙ НАВИГАТОР</p><h1>Здравствуйте, я RedArm AI</h1></div><span class="status"><i></i> Онлайн</span></header>
+      <section class="hero" id="welcome">
+        <div class="hero-icon"><img src="redarm-logo.jpg" alt="Красная механическая рука RedArm AI" /></div>
+        <h2>К кому обратиться?</h2>
+        <p>Опишите, что вас беспокоит простыми словами. Я помогу оценить срочность и найти нужного специалиста.</p>
+        <div class="examples">
+          <button data-query="Болит горло и температура">«Болит горло и температура»</button>
+          <button data-query="Упал и болит рука">«Упал и болит рука»</button>
+          <button data-query="На коже появилась сыпь">«На коже появилась сыпь»</button>
+        </div>
+        <section class="about-project" id="about">
+          <p class="section-label">ЗАЧЕМ НУЖЕН REDARM AI</p>
+          <p class="about-copy">RedArm AI превращает обычное описание самочувствия в понятный маршрут: оценивает срочность, подсказывает подходящего специалиста и помогает найти клинику рядом. Без сложных медицинских терминов.</p>
+          <div class="steps">
+            <article><span>01</span><b>Опишите, что случилось</b><p>Простыми словами: боль, травма, температура или другой симптом.</p></article>
+            <article><span>02</span><b>Получите безопасный маршрут</b><p>Помощник уточнит важное и определит, насколько срочно нужна помощь.</p></article>
+            <article><span>03</span><b>Запишитесь к нужному врачу</b><p>Вы увидите специалиста и удобные варианты клиник поблизости.</p></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="chat-log" id="chatLog" aria-live="polite"></section>
+      <section class="result hidden" id="result"></section>
+      <div class="composer"><input id="query" autocomplete="off" placeholder="Например: болит спина после падения…" /><button id="send" aria-label="Отправить">➜</button></div>
+      <p class="disclaimer">RedArm AI не заменяет врача и не назначает лечение. При угрозе жизни звоните <b>103</b> или <b>112</b>.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
